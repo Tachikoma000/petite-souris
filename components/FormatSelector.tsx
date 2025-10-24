@@ -9,7 +9,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowDown } from 'lucide-react';
 
 interface FormatSelectorProps {
   inputFormat: FileType;
@@ -55,9 +55,10 @@ export default function FormatSelector({
             </Select>
           </div>
 
-          {/* Arrow */}
+          {/* Arrow - Down on mobile, Right on desktop */}
           <div className="flex items-center justify-center pt-0 sm:pt-7">
-            <ArrowRight className="w-6 h-6 text-primary" />
+            <ArrowDown className="w-6 h-6 text-primary sm:hidden" />
+            <ArrowRight className="hidden w-6 h-6 text-primary sm:block" />
           </div>
 
           {/* To Format */}
