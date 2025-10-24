@@ -29,7 +29,7 @@ export default function FormatSelector({
   const formats = Object.keys(SUPPORTED_FORMATS) as FileType[];
 
   return (
-    <Card>
+    <Card className="border-green-100 bg-gradient-to-br from-white to-green-50/30">
       <CardContent className="pt-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           {/* From Format */}

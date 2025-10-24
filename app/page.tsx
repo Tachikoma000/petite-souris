@@ -203,7 +203,7 @@ export default function Home() {
         </div>
 
         {/* File Uploader */}
-        <Card className="mb-6">
+        <Card className="mb-6 border-blue-100 bg-gradient-to-br from-white to-blue-50/30">
           <CardContent className="p-8">
             <FileUploader onFileSelect={handleFileSelect} disabled={isConverting} />
           </CardContent>
@@ -265,52 +265,79 @@ export default function Home() {
         )}
 
         {/* How to Use */}
-        <Card>
-          <CardContent className="pt-6">
-            <h2 className="text-2xl font-bold text-center mb-6">How to Use</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="flex flex-col items-center text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground font-bold text-xl mb-4">
-                  1
+        <div className="space-y-4">
+          <h2 className="text-xl font-bold text-center mb-6">How It Works</h2>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {/* Step 1 */}
+            <Card className="border-green-200 bg-gradient-to-br from-green-50 to-white hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center font-bold text-sm">
+                    1
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-sm mb-1">Select Formats</h3>
+                    <p className="text-xs text-muted-foreground">
+                      Choose your input and output formats
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-semibold mb-2">Select Formats</h3>
-                <p className="text-sm text-muted-foreground">
-                  Choose what format to convert from and to
-                </p>
-              </div>
+              </CardContent>
+            </Card>
 
-              <div className="flex flex-col items-center text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground font-bold text-xl mb-4">
-                  2
+            {/* Step 2 */}
+            <Card className="border-blue-200 bg-gradient-to-br from-blue-50 to-white hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">
+                    2
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-sm mb-1">Upload Files</h3>
+                    <p className="text-xs text-muted-foreground">
+                      Drag & drop or click to add files
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-semibold mb-2">Add Files</h3>
-                <p className="text-sm text-muted-foreground">
-                  Upload one or multiple files (max 10MB each)
-                </p>
-              </div>
+              </CardContent>
+            </Card>
 
-              <div className="flex flex-col items-center text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground font-bold text-xl mb-4">
-                  3
+            {/* Step 3 */}
+            <Card className="border-purple-200 bg-gradient-to-br from-purple-50 to-white hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold text-sm">
+                    3
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-sm mb-1">Convert</h3>
+                    <p className="text-xs text-muted-foreground">
+                      Click convert and wait a few seconds
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-semibold mb-2">Start Converting</h3>
-                <p className="text-sm text-muted-foreground">
-                  Click "Convert" button to process all files
-                </p>
-              </div>
+              </CardContent>
+            </Card>
 
-              <div className="flex flex-col items-center text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground font-bold text-xl mb-4">
-                  4
+            {/* Step 4 */}
+            <Card className="border-amber-200 bg-gradient-to-br from-amber-50 to-white hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold text-sm">
+                    4
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-sm mb-1">Download</h3>
+                    <p className="text-xs text-muted-foreground">
+                      Files download automatically when ready
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-semibold mb-2">Download Results</h3>
-                <p className="text-sm text-muted-foreground">
-                  Files auto-download or click to re-download
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </div>
     </div>
   );
